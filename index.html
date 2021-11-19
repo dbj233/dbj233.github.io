@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html id="容器">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DBJ 嘿嘿 我的 DBJ</title>
+    <meta name="viewport" content="width=device-width,user-scalable=0">
+    <meta name="discription" content="DBJ 嘿嘿嘿嘿嘿">
+    <meta name="keyword" content="DBJ,bullshit">
+    <style>
+        html {
+            text-align: center;
+            background: #d0b164;
+            color: #412300;
+            transition: 1s ease;
+            font-family: sans-serif;
+            word-break: break-all;
+        }
+
+        html[数字=""] {
+            background: #b3d0d0;
+            color: #002b41;
+        }
+
+        head {
+            display: block;
+            text-align: center;
+            padding: 3em 0 2em;
+        }
+
+        title {
+            display: block;
+            font-weight: 700;
+            font-size: 2em;
+            margin: 0.67em;
+            line-height: 45px;
+
+        }
+
+        meta[name="discription"] {
+            display: block;
+            margin: 1em 0;
+        }
+
+        meta[name="discription"]:after {
+            content: attr(content);
+        }
+
+        body {
+            margin: 0;
+            padding: 0 0 100px;
+        }
+
+        a {
+            color: blue;
+        }
+
+        input {
+            outline: 0;
+            font-size: 20px;
+            line-height: 26px;
+            text-align: center;
+
+            padding: 8px 12px;
+            border: 0;
+            width: 80%;
+            max-width: 300px;
+            -webkit-appearance: none;
+        }
+
+        #恶臭 {
+            font-size: 24px;
+            font-family: "Comic Sans MS", script;
+            padding: 40px 10px 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <input id="主题" placeholder="想要吐槽的主题">
+    <div id="dbj"></div>
+
+    <script src="gen.js"></script>
+    <script>
+        主题.oninput = () => {
+            let title = 主题.value.trim();
+            dbj.innerHTML = 生成文章();
+            容器.setAttribute('主题', title);
+        };
+
+        主题.oninput();
+
+        const 加载脚本 = (src, el) => {
+            el = document.createElement('script');
+            el.src = src;
+            document.body.appendChild(el);
+        };
+
+        setTimeout(() => {
+            加载脚本('//s4.cnzz.com/z_stat.php?id=1278706389&web_id=1278706389');
+        }, 400);
+    </script>
+</body>
+
+</html>
