@@ -79,14 +79,14 @@
 
 <body>
     <input id="主题" placeholder="想要吐槽的主题">
-    <div id="dbj"></div>
+    <br><br>
+    <div id="dbj" style="max-width: 500px;text-align:center;margin:0 auto;"></div>
 
     <script src="gen.js"></script>
     <script>
         主题.oninput = () => {
             let title = 主题.value.trim();
-            dbj.innerHTML = 生成文章();
-            容器.setAttribute('主题', title);
+            dbj.innerHTML = 生成文章(title);
         };
 
         主题.oninput();
