@@ -10,7 +10,6 @@
     <style>
         html {
             text-align: center;
-            background: #d0b164;
             color: #412300;
             transition: 1s ease;
             font-family: sans-serif;
@@ -100,6 +99,21 @@
         setTimeout(() => {
             加载脚本('//s4.cnzz.com/z_stat.php?id=1278706389&web_id=1278706389');
         }, 400);
+    </script>
+    <script>
+        function rand(min, max) {
+            var range = max - min;
+            var rand = Math.random();
+            return (min + Math.round(rand * range));
+        }
+        window.onload = change();
+        function change() {
+            var colorVal = '#' + rand(180, 255).toString(16) +
+                rand(140, 255).toString(16) +
+                rand(120, 220).toString(16);
+            document.body.bgColor = colorVal;
+            window.setTimeout("change()", 1000);
+        }
     </script>
 </body>
 
