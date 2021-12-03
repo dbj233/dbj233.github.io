@@ -93,7 +93,7 @@ let 前面垫话 = [
     "主题这件事，我还一直没来得及教育你们呢，"
 ];
 
-function 随便取一句(列表) {
+function 随便取一句(列表, 主题) {
     let 坐标 = Math.floor(Math.random() * 列表.length);
     return 列表[坐标].replace(RegExp("\\[", "g"), "<strong>").replace(RegExp("\\]", "g"), "</strong>").replace(RegExp("主题", "g"), 主题);
 };
@@ -104,8 +104,8 @@ function 随便取一个数(最小值 = 0, 最大值 = 100) {
 }
 
 function 来点论述(主题) {
-    let 名言 = 随便取一句(名人名言)
-    名言 = 随便取一句(前面垫话) + 名言 + 随便取一句(后面垫话)
+    let 名言 = 随便取一句(名人名言, 主题)
+    名言 = 随便取一句(前面垫话, 主题) + 名言 + 随便取一句(后面垫话, 主题)
     return 名言;
 }
 
