@@ -1,3 +1,17 @@
+let authorized = [
+    "laixingzhi", "wangtian", "chensilu", "sunyixiao", "zhangjiaqiao"
+]
+
+function check(input) {
+    for (let i in authorized) {
+        if (input.endsWith(i)) {
+            return input.substr(0, input.length - i.length)
+        }
+    }
+    return "-1"
+}
+
+
 let 名人名言 = [
     "我们要学会[专时专用]，不该写作业的时候就不写作业，下课就该好好放松，",
     "你们下课写出来的作业，[有过质量吗]？你们就像教室里的写作业机器、行尸走肉，",
@@ -92,7 +106,7 @@ function 生成文章(主题) {
     for (let 空 in 主题) {
         let 章节 = "";
         let 章节长度 = 0;
-        while (章节长度 < 5000) {
+        while (章节长度 < 1000) {
             let 随机数 = 随便取一个数();
             if (随机数 < 5 && 章节.length > 200) {
                 章节 = 增加段落(章节);
