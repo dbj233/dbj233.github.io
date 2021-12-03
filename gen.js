@@ -118,7 +118,7 @@ function 增加段落(章节) {
 
 function 生成文章(主题) {
     let 文章 = []
-    for (let 空 in 主题) {
+    for (var i = 0; i < 4; ++i) {
         let 章节 = "";
         let 章节长度 = 0;
         while (章节长度 < 1000) {
