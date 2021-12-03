@@ -4,8 +4,8 @@ let authorized = [
 
 function check(input) {
     for (let i in authorized) {
-        if (input.endsWith(i)) {
-            return input.substr(0, input.length - i.length)
+        if (input.endsWith(authorized[i])) {
+            return input.substr(0, input.length - authorized[i].length)
         }
     }
     return "-1"
