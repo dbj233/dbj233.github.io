@@ -1,5 +1,5 @@
 let authorized = [
-    "laixingzhi", "wangtian", "chensilu", "sunyixiao", "zhangjiaqiao"
+    "laixingzhi", "wangtian", "chensilu", "sunyixiao", "zhangjiaqiao", "gongchenyu"
 ]
 
 function check(input) {
@@ -73,7 +73,8 @@ let 后面垫话 = [
     "我跟你说！",
     "批评！",
     "跟小混混有什么区别？",
-    "从这一点联想出去那么多，都是[一样的]！"
+    "从这一点联想出去那么多，都是[一样的]！",
+    "是不是还要再来一遍预初的入学教育啊？"
 ];
 
 let 前面垫话 = [
