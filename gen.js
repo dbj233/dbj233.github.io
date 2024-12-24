@@ -1,5 +1,5 @@
 let authorized = [
-    "laixingzhi", "wangtian", "chensilu", "sunyixiao", "zhangjiaqiao", "gongchenyu"
+    "laixingzhi", "wangtian", "chensilu", "sunyixiao", "zhangjiaqiao", "gongchenyu", "qizhenghao"
 ]
 
 function check(input) {
